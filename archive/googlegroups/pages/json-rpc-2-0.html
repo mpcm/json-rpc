@@ -251,7 +251,7 @@ The Server should respond with an Array containing the corresponding Response ob
 <pre>--&gt; [<br>        {"jsonrpc": "2.0", "method": "sum", "params": [1,2,4], "id": "1"},<br>        {"jsonrpc": "2.0", "method": "notify_hello", "params": [7]},<br>        {"jsonrpc": "2.0", "method": "subtract", "params": [42,23], "id": "2"},<br>        {"foo": "boo"},<br>        {"jsonrpc": "2.0", "method": "foo.get", "params": {"name": "myself"}, "id": "5"},<br>        {"jsonrpc": "2.0", "method": "get_data", "id": "9"} <br>    ]<br>&lt;-- [<br>        {"jsonrpc": "2.0", "result": 7, "id": "1"},<br>        {"jsonrpc": "2.0", "result": 19, "id": "2"},<br>        {"jsonrpc": "2.0", "error": {"code": -32600, "message": "Invalid Request."}, "id": null},<br>        {"jsonrpc": "2.0", "error": {"code": -32601, "message": "Method not found."}, "id": "5"},<br>        {"jsonrpc": "2.0", "result": ["hello", 5], "id": "9"}<br>    ]</pre>
   </div>
 <div>
-<p></p><p style="margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px">rpc call Batch (all notifications):</p><pre>--&gt; [<br>        {"jsonrpc": "2.0", "method": "notify_sum", "params": [1,2,4]},<br>        {"jsonrpc": "2.0", "method": "notify_hello", "params": [7]},<br>    ]<br>&lt;-- //Nothing is returned for all notification batches</pre><p></p>
+<p></p><p style="margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px">rpc call Batch (all notifications):</p><pre>--&gt; [<br>        {"jsonrpc": "2.0", "method": "notify_sum", "params": [1,2,4]},<br>        {"jsonrpc": "2.0", "method": "notify_hello", "params": [7]}<br>    ]<br>&lt;-- //Nothing is returned for all notification batches</pre><p></p>
   </div>
 </div>
 <div>
